@@ -1,0 +1,129 @@
+@import "styles/reset/reset.css";
+
+body {
+    background-color: #3a3939;
+}
+
+.keyboard {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+    background-color: #7b7c7c;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.key {
+    grid-column: span 2;
+    border: 1px solid black;
+    display: block;
+    background-color: #d2d2d2;
+    padding: 5px 5px;
+    box-shadow: 6px 5px 10px -3px black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 180ms linear;
+}
+
+.key:hover {
+    background-color: #f6f6f6;
+    box-shadow: none;
+}
+
+
+.key-vector > .key:first-child {
+    grid-area: up;
+}
+
+.key-vector > .key:nth-child(2) {
+    grid-area: left;
+}
+
+.key-vector > .key:nth-child(3) {
+    grid-area: right;
+}
+
+.key-vector > .key:nth-child(4) {
+    grid-area: down;
+}
+
+.key-vector {
+    display: grid;
+    justify-content: end;
+    grid-gap: 3px;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(2, 28px);
+    grid-template-areas: ". up ." "left down right";
+}
+
+.keyboard-left {
+    padding: 10px;
+    text-transform: capitalize;
+    font-size: 15px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(38, 25px);
+    grid-template-rows: repeat(5, 60px);
+}
+
+.key-vector {
+    grid-column: span 5;
+    gap: 5px;
+}
+
+
+.br {
+    grid-column: span 3;
+}
+
+.left_ctr {
+    grid-column: span 3;
+}
+
+.right-ctrl {
+    grid-column: span 3;
+}
+
+.space {
+    grid-column: span 11;
+}
+
+.backspace {
+    grid-column: span 4;
+}
+
+.enter {
+    grid-column: span 4;
+}
+
+.right-shift {
+    grid-column: span 5;
+}
+
+.left-Shift {
+    grid-column: span 5;
+}
+
+.tab {
+    grid-column: span 3;
+}
+
+.caps {
+    grid-column: span 4;
+}
+
+.right-enter {
+    grid-row: span 2;
+}
+
+.right-plus {
+    grid-row: span 2;
+}
+
+.right-zero {
+    grid-column: span 4;
+}
